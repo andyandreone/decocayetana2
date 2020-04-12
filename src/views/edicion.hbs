@@ -1,0 +1,55 @@
+<div class="container">
+  {{#if user}}
+  <a href="/admin/update/{{_id}}">
+    <button class="btn btn-secondary btn-sn" type="submit">
+      + Agregar un nuevo producto
+    </button>
+  </a>
+  <a href="/admin/logout/{{_id}}">
+    <button class="btn btn-dark btn-sn" type="submit">
+      x Salir de la sesion
+    </button>
+  </a>
+
+
+
+  <h2>Productos</h2>
+  <div class="row">
+
+{{#each producto}}
+    <div class="card col-md-3">
+      <img src="http://placehold.it/300x300" class="card-img-top" alt="Imagen Producto">
+      <div class="card-body">
+        <h5 class="card-title">{{card_title}}</h5>
+        <p class="card-text">{{card_text}}</p>
+        <a href="{{card_link}}" class="btn btn-primary btn-block">Comprar</a>
+
+
+        <a href="/admin/edit-product/{{_id}}">
+        <button class="btn btn-success btn-block btn-sn" type="submit">
+          Editar
+        </button>
+        </a>
+        <form class="" action="/admin/delete/{{_id}}?_method=DELETE" method=POST>
+        <input type="hidden" name="_method" value="DELETE">
+        <button class="btn btn-danger btn-block btn-sn" type="submit">
+          Borrar
+        </button>
+      </form>
+    </div>
+    </div>
+
+  {{else}}
+  {{#if user}}
+    <div class="card mx-auto">
+      <div class="card-body">
+        <p class="lead">No hay ningun producto aun!</p>
+        <a href="/admin/update" class='btn btn-success btn-block'>Agrega uno</a>
+      </div>
+    </div>
+    {{/if}}
+
+  {{/each}}
+  </div>
+  {{/if}}
+</div>

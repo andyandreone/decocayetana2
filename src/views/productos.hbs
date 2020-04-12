@@ -1,0 +1,21 @@
+<div class="container">
+
+
+
+  <h2>Productos</h2>
+  <div class="row">
+
+{{#each producto}}
+    <div class="card col-md-3">
+      <img src="http://placehold.it/300x300" class="card-img-top" alt="Imagen Producto">
+      <div class="card-body">
+        <h5 class="card-title">{{card_title}}</h5>
+        <p class="card-text">{{card_text}}</p>
+        <a href="{{card_link}}" class="btn btn-primary btn-block">Comprar</a>
+
+    </div>
+    </div>
+
+  {{/each}}
+  </div>
+</div>

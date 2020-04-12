@@ -1,0 +1,34 @@
+<div class="col-md-4 mx-auto">
+  <div class="card">
+
+    <div class="card-header">
+      <h1>Nuevo Producto</h1>
+    </div>
+
+    <div class="card-body">
+      <form class="" action="/admin/new-product" method="POST">
+
+        <div class="form-group">
+          <input type="text" name="card_title" class="form-control" placeholder="Titulo del producto" value="{{card_title}}" autofocus>
+        </div>
+
+        <div class="form-group">
+          <textarea name="card_text" class="form-control" placeholder="Descripcion">{{card_text}}</textarea>
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="card_link" class="form-control" placeholder="Link de mercado libre" value="{{card_link}}" autofocus>
+        </div>
+
+          <div class="form-group">
+            <button class="btn btn-primary btn-block" type="submit">
+              Save
+            </button>
+          </div>
+
+      </form>
+    </div>
+
+  </div>
+
+</div>
